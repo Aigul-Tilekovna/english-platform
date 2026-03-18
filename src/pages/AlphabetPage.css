@@ -1,0 +1,52 @@
+.alphabet-page {
+  font-family: "Comic Sans MS", sans-serif;
+  padding: 20px;
+  text-align: center;
+  background: #e0f7fa;
+  min-height: 100vh;
+}
+
+.alphabet-page h1 {
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+.alphabet-page .letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.alphabet-page .letter {
+  font-size: 36px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.alphabet-page .letter:hover {
+  transform: scale(1.2);
+  background-color: #b2ebf2;
+}
+
+.alphabet-page button {
+  margin-top: 20px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: #ff6f00;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.alphabet-page button:hover {
+  background-color: #ff8f00;
+  transform: translateY(-2px);
+}

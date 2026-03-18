@@ -1,0 +1,72 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* КАРТОЧКА */
+.flip-card {
+  width: 120px;
+  height: 120px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+/* ВНУТРИ */
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+/* СТОРОНЫ */
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* FRONT (как на твоём скрине) */
+.front {
+  background: #4f8edc;
+  color: white;
+}
+
+/* BACK */
+.back {
+  background: #6ec1e4;
+  transform: rotateY(180deg);
+}
+
+/* ТЕКСТ */
+.front h2, .back h2 {
+  font-size: 28px;
+}
+
+.front p, .back p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* МОДАЛКА ШИРОКАЯ */
+.modal-content {
+  width: 900px;   /* 🔥 ВОТ ЭТО ГЛАВНОЕ */
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 20px;
+  padding: 20px;
+}
